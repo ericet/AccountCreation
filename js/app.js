@@ -77,7 +77,7 @@ $(document).ready(async function () {
     var posting = { weight_threshold: 1, account_auths: [], key_auths: [[keys.posting, 1]] };
 
     const create_op = [
-      'create_claimed_account',
+      'account_create',
       {
         active: activeKey,
         creator,
