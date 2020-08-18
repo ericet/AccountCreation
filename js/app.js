@@ -95,7 +95,7 @@ $(document).ready(async function () {
 
     if (transfer > 0) {
       const gift_op = ['transfer', {
-        from: process.env.ACCOUNT,
+        from: creator,
         to: username,
         amount: transfer + " BLURT",
         memo: ''
