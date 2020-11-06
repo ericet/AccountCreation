@@ -56,6 +56,19 @@ $(document).ready(async function () {
   // Auto fills password field
   $('#password').val(suggestPassword());
 
+  // Download keys
+  $('#download-password').click(function (e) {
+    e.preventDefault();
+    const username = $('#new-account').val().toLowerCase();
+    const password = $('#password').val();
+
+    const keys = getPrivateKeys(username, password);
+
+    const text = `Username: ${username}\nMaster password: ${password}\nOwner key: ${keys.owner}\nActive key: ${keys.active}\nPosting key: ${keys.posting}\nMemo key: ${keys.memo}`;
+
+    var file = new File([text], `${username}-backup.txt`, { type: "text/plain;charset=utf-8" });
+    saveAs(file);
+});
 
 
   // Processing create account form
