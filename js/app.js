@@ -1,4 +1,4 @@
-blurt.api.setOptions({ url: "https://rpc.blurt.buzz", useAppbaseApi: true })
+blurt.api.setOptions({ url: "https://rpc.blurt.world", useAppbaseApi: true })
 const DEFAULT_CREATION_FEE = "10.000 BLURT"
 // Checking if the already exists
 async function checkAccountName(username) {
